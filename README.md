@@ -2,7 +2,8 @@
 A webpack loader that allows to use SVG files as Vue Components.
 
 ## Installation
-`npm install --save-dev vue-svg-loader`
+`npm install --save-dev vue-svg-loader`  
+`yarn add --dev vue-svg-loader`
 
 ## Configuration
 ```js
