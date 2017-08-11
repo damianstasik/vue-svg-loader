@@ -1,4 +1,5 @@
 var svg = require('svgo');
+var compiler = require('vue-template-compiler');
 
 var svgo = new svg({
   plugins: ['removeDoctype', 'removeComments'],
@@ -14,6 +15,8 @@ module.exports = function (content) {
     if (result.error) {
       return cb(result.error);
     }
-    cb(null, "module.exports = {template: '" + result.data + "'};");
+    
+    var compiled = compiler.compile(result.data, {preserveWhitespace: false});
+    cb(null, "module.exports = {render: function () {" + compiled.render + "}};");
   });
 };

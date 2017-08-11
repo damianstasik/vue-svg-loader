@@ -14,6 +14,9 @@
   "license": "MIT",
   "author": "visualfanatic",
   "main": "index.js",
+  "peerDependencies": {
+    "vue-template-compiler": "^2.0.0"
+  },
   "dependencies": {
     "svgo": "^0.7.1"
   }
