@@ -1,7 +1,7 @@
 {
   "name": "vue-svg-loader",
   "description": "Use SVG files as Vue Components",
-  "version": "0.1.2",
+  "version": "0.2.0",
   "keywords": [
     "vue-svg-loader",
     "svg",
@@ -18,6 +18,6 @@
     "vue-template-compiler": "^2.0.0"
   },
   "dependencies": {
-    "svgo": "^0.7.1"
+    "svgo": "^0.7.2"
   }
 }
