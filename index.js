@@ -3,10 +3,10 @@ var loaderUtils = require('loader-utils');
 var compiler = require('vue-template-compiler');
 
 module.exports = function (content) {
-  var options = loaderUtils.getOptions(this) || {};
-  var svgo = new svg({
-    plugins: options.svgo || [{removeDoctype: true}, {removeComments: true}],
-  });
+  var options = loaderUtils.getOptions(this) || {
+    plugins: [{removeDoctype: true}, {removeComments: true}],
+  };
+  var svgo = new svg(options);
 
   this.cacheable && this.cacheable(true);
   this.addDependency(this.resourcePath);
