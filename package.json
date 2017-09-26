@@ -18,6 +18,7 @@
     "vue-template-compiler": "^2.0.0"
   },
   "dependencies": {
+    "loader-utils": "^1.1.0",
     "svgo": "^0.7.2"
   }
 }
