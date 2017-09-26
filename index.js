@@ -5,7 +5,7 @@ var compiler = require('vue-template-compiler');
 module.exports = function (content) {
   var options = loaderUtils.getOptions(this) || {};
   var svgo = new svg({
-    plugins: options.svgo || ['removeDoctype', 'removeComments'],
+    plugins: options.svgo || [{removeDoctype: true}, {removeComments: true}],
   });
 
   this.cacheable && this.cacheable(true);
