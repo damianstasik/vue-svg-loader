@@ -1,11 +1,14 @@
 var svg = require('svgo');
+var loaderUtils = require('loader-utils');
 var compiler = require('vue-template-compiler');
 
-var svgo = new svg({
-  plugins: ['removeDoctype', 'removeComments'],
-});
-
 module.exports = function (content) {
+  var options = loaderUtils.getOptions(this) || {};
+  var svgoOptions = options.svgo || {
+    plugins: [{removeDoctype: true}, {removeComments: true}],
+  };
+  var svgo = new svg(svgoOptions);
+
   this.cacheable && this.cacheable(true);
   this.addDependency(this.resourcePath);
 
