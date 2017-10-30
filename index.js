@@ -38,7 +38,7 @@ module.exports = function (content) {
                 addedClasses.push(className);
             });
 
-            if (addClasses) {
+            if (addClasses.length) {
                 json.child[0].attr.class = addedClasses.join(' ');
             }
 
