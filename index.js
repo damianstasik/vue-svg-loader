@@ -1,16 +1,16 @@
 var svg = require('svgo');
-var compiler = require('vue-template-compiler');
 var loaderUtils = require('loader-utils');
-var cloneDeep = require('lodash.clonedeep');
+var compiler = require('vue-template-compiler');
+var loaderUtils = require('loader-utils');;
 var html2json = require('html2json').html2json;
 var json2html = require('html2json').json2html;
 
-var svgo = new svg({
-  plugins: ['removeDoctype', 'removeComments'],
-});
-
 module.exports = function (content) {
-  var options = cloneDeep(loaderUtils.getOptions(this) || {});
+  var options = loaderUtils.getOptions(this) || {};
+  var svgoOptions = options.svgo || {
+    plugins: [{removeDoctype: true}, {removeComments: true}],
+  };
+  var svgo = new svg(svgoOptions);
 
   this.cacheable && this.cacheable(true);
   this.addDependency(this.resourcePath);

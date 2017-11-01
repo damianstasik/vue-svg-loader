@@ -11,9 +11,16 @@ yarn add --dev vue-template-compiler vue-svg-loader
 ```js
 {
   test: /\.svg$/,
-  loader: 'vue-svg-loader', // `vue-svg` for webpack 1.x,
+  loader: 'vue-svg-loader', // `vue-svg` for webpack 1.x
   options: {
-      classes: 'default-class-1 default-class-2'
+    classes: 'default-class-1 default-class-2',
+    // optional [svgo](https://github.com/svg/svgo) options
+    svgo: {
+      plugins: [
+        {removeDoctype: true},
+        {removeComments: true}
+      ]
+    }
   }
 }
 ```
