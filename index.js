@@ -14,19 +14,22 @@ module.exports = function (content) {
 
   const cb = this.async();
 
-  svgo.optimize(content, (result) => {
-    if (result.error) {
-      return cb(result.error);
-    }
+  svgo.optimize(content, { path: this.resourcePath })
+    .then((result) => {
+      const compiled = compiler.compile(result.data, { preserveWhitespace: false });
+      let component = `render: function () {${compiled.render}}`;
 
-    const compiled = compiler.compile(result.data, { preserveWhitespace: false });
-    let component = `render: function () {${compiled.render}}`;
+      if (options.includePath || query.includePath) {
+        const filename = loaderUtils.interpolateName(this, '[path][name].[ext]', { context: this.options.context });
+        component = `${component}, path:${JSON.stringify(filename)}`;
+      }
 
-    if (options.includePath || query.includePath) {
-      const filename = loaderUtils.interpolateName(this, '[path][name].[ext]', { context: this.options.context });
-      component = `${component}, path:${JSON.stringify(filename)}`;
-    }
-
-    cb(null, `module.exports = {${component}};`);
-  });
+      cb(null, `module.exports = {${component}};`);
+    }, function (error) {
+      if (error instanceof Error) {
+        cb(error);
+        return;
+      }
+      cb(new Error(error));
+    });
 };
