@@ -1,32 +1,29 @@
-const svg = require('svgo');
+const svgo = require('svgo');
 const loaderUtils = require('loader-utils');
 const compiler = require('vue-template-compiler');
+const transpile = require('vue-template-es2015-compiler');
 
 module.exports = function (content) {
   const options = loaderUtils.getOptions(this) || {};
-  const query = loaderUtils.parseQuery(this.resourceQuery || '?');
-  const svgo = new svg(options.svgo || {
-    plugins: [{ removeDoctype: true }, { removeComments: true }],
-  });
+  const svg = new svgo(options.svgo || {});
+  const path = this.resourcePath;
 
   this.cacheable && this.cacheable(true);
   this.addDependency(this.resourcePath);
 
   const cb = this.async();
+  let component;
 
-  svgo.optimize(content, (result) => {
-    if (result.error) {
-      return cb(result.error);
-    }
+  svg
+    .optimize(content, { path: path })
+    .then((result) => {
+      const compiled = compiler.compile(result.data, { preserveWhitespace: false });
 
-    const compiled = compiler.compile(result.data, { preserveWhitespace: false });
-    let component = `render: function () {${compiled.render}}`;
+      component = transpile(`var render = function () {${compiled.render}};`);
+      component += `var toString = function () {return ${JSON.stringify(path)}};`;
+      component += `module.exports = { render: render, toString: toString };`;
 
-    if (options.includePath || query.includePath) {
-      const filename = loaderUtils.interpolateName(this, '[path][name].[ext]', { context: this.options.context });
-      component = `${component}, path:${JSON.stringify(filename)}`;
-    }
-
-    cb(null, `module.exports = {${component}};`);
-  });
+      cb(null, component);
+    })
+    .catch(cb);
 };
