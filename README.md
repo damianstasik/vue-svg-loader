@@ -24,6 +24,23 @@ yarn add --dev vue-svg-loader
 }
 ```
 
+## Nuxt.js Configuration
+```js
+build: {
+  extend (config, ctx) {
+    // Exclude svg loading from url loader
+    const urlLoader = config.module.rules.find(rule => rule.loader === 'url-loader');
+    urlLoader.test = /\.(png|jpe?g|gif)$/;
+      
+    // Add svg loader (see above)
+    config.module.rules.push({
+      test: /\.svg$/,
+      loader: 'vue-svg-loader',
+    });
+  }
+}
+```
+
 ## Example code
 
 ```html
