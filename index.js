@@ -1,11 +1,26 @@
 const svgo = require('svgo');
+const fs = require("fs");
 const loaderUtils = require('loader-utils');
 const compiler = require('vue-template-compiler');
 const transpile = require('vue-template-es2015-compiler');
 
+function getSvg(content, path, options) {
+    const svg = new svgo(options.svgo || {});
+    const useSvgo = options.useSvgo === undefined ? true : options.useSvgo;
+
+    return new Promise((resolve, reject) => {
+        if (useSvgo) resolve(svg.optimize(content, { path }));
+        else {
+            fs.readFile(path, "utf8", (err, data) => {
+                if (err) reject(err);
+                else resolve({ data });
+            });
+        }
+    });
+}
+
 module.exports = function (content) {
   const options = loaderUtils.getOptions(this) || {};
-  const svg = new svgo(options.svgo || {});
   const path = this.resourcePath;
 
   this.cacheable && this.cacheable(true);
@@ -14,8 +29,7 @@ module.exports = function (content) {
   const cb = this.async();
   let component;
 
-  svg
-    .optimize(content, { path: path })
+  getSvg(content, path, options)
     .then((result) => {
       const compiled = compiler.compile(result.data, { preserveWhitespace: false });
 
