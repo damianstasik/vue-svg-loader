@@ -13,6 +13,9 @@ yarn add --dev vue-svg-loader
   test: /\.svg$/,
   loader: 'vue-svg-loader', // `vue-svg` for webpack 1.x
   options: {
+    // optional
+    useSvgo: true, // default: true
+
     // optional [svgo](https://github.com/svg/svgo) options
     svgo: {
       plugins: [
