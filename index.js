@@ -15,13 +15,13 @@ module.exports = function (content) {
   let component;
 
   svg
-    .optimize(content, { path: path })
+    .optimize(content, { path })
     .then((result) => {
       const compiled = compiler.compile(result.data, { preserveWhitespace: false });
 
       component = transpile(`var render = function () {${compiled.render}};`);
       component += `var toString = function () {return ${JSON.stringify(path)}};`;
-      component += `module.exports = { render: render, toString: toString };`;
+      component += `module.exports = { render, toString };`;
 
       cb(null, component);
     })
