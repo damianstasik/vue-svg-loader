@@ -24,6 +24,23 @@ yarn add --dev vue-svg-loader
 }
 ```
 
+**Warning**: By default, `vue-cli` will put in a catch-all loader like so:
+
+```js
+{
+    test: /\.(png|jpe?g|gif|svg)(\?.*)?$/,
+    loader: 'url-loader'
+}
+```
+
+This is great until you wish to use a different loader for one of the filetypes. In order to use `vue-svg-loader` you'll need to do one of the following:
+
+- Remove the `|svg` part of the `url-loader` test so that it doesn't try to take over `vue-svg-loader`'s new job.
+
+- Place the `vue-svg-loader` block _above_ the `url-loader` to that [webpack loader chaining](https://webpack.js.org/concepts/loaders/) sees `vue-svg-loader` first and then doesn't do anyting with the SVG (not recommended as it can be confusing).
+
+- Use webpack's `oneOf` functionality demoed by @robsterlini in Issue #27.
+
 ## Example code
 
 ```html
