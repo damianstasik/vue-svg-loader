@@ -22,8 +22,7 @@ module.exports = function (content) {
       });
 
       component = transpile(`var render = function () {${compiled.render}};`);
-      component += `var toString = function () {return ${JSON.stringify(path)}};`;
-      component += `module.exports = { render: render, toString: toString };`;
+      component += `module.exports = { render: render };`;
 
       cb(null, component);
     })
