@@ -10,6 +10,10 @@
     "webpack",
     "vue"
   ],
+  "scripts": {
+    "docs:serve": "vuepress dev docs",
+    "docs:build": "vuepress build docs"
+  },
   "bugs": "https://github.com/visualfanatic/vue-svg-loader/issues",
   "repository": "visualfanatic/vue-svg-loader",
   "license": "MIT",
@@ -18,7 +22,11 @@
   "dependencies": {
     "loader-utils": "^1.1.0",
     "svgo": "^1.0.4",
-    "vue-template-es2015-compiler": "^1.6.0",
-    "vue-template-compiler": "^2.5.13"
+    "vue-template-compiler": "^2.5.13",
+    "vue-template-es2015-compiler": "^1.6.0"
+  },
+  "devDependencies": {
+    "vue-tabs-component": "^1.4.0",
+    "vuepress": "^0.12.0"
   }
 }

@@ -1,0 +1,22 @@
+@import '~@default-theme/styles/config.styl'
+
+.home .hero img
+  max-height 140px
+
+.tabs-component-tabs
+  list-style none
+  display flex
+  padding-left 0
+
+.tabs-component-tab
+  margin-right 25px
+
+.tabs-component-tab-a
+  color desaturate(lighten($textColor, 45%), 10%)
+
+.tabs-component-tab.is-active
+  .tabs-component-tab-a
+    color $accentColor
+
+.tabs-component-panels
+  margin-bottom 40px
