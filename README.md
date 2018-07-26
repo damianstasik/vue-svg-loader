@@ -1,7 +1,6 @@
 <p align="center"><img src="docs/.vuepress/public/logo.svg" width="40%"></p>
 <h1 align="center">vue-svg-loader</h1>
 <p align="center">webpack loader that lets you use SVG files as Vue components</p>
-<hr>
 <p align="center">
   <a href="https://vue-svg-loader.js.org">Documentation</a> -
   <a href="https://vue-svg-loader.js.org/faq.html">FAQ</a>
@@ -10,6 +9,7 @@
 ## Installation
 ``` bash
 npm i -D vue-svg-loader
+
 yarn add --dev vue-svg-loader
 ```
 
