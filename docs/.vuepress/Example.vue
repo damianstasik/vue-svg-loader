@@ -1,14 +1,14 @@
 <template>
   <nav>
-    <a href="#" class="btn btn-vue">
+    <a href="https://github.com/vuejs/vue" class="btn btn-vue">
       <VueLogo class="icon" />
       Vue
     </a>
-    <a href="#" class="btn btn-svgo">
+    <a href="https://github.com/svg/svgo" class="btn btn-svgo">
       <SVGOIcon class="icon" />
       SVGO
     </a>
-    <a href="#" class="btn btn-webpack">
+    <a href="https://github.com/webpack/webpack" class="btn btn-webpack">
       <WebpackIcon class="icon" />
       webpack
     </a>
