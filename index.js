@@ -20,9 +20,23 @@ module.exports = function (content) {
       const compiled = compiler.compile(result.data, {
         preserveWhitespace: false,
       });
+      
+      const transpileCode = `var render = function (${options.functional ? '_h,_vm' : ''}) { ${compiled.render} };`;
 
-      component = transpile(`var render = function () {${compiled.render}};`);
-      component += `module.exports = { render: render };`;
+      const transpileOptions = {
+        transforms: {
+          stripWith: true,
+          stripWithFunctional: options.functional || false
+        }
+      };
+
+      component = `${transpile(transpileCode, transpileOptions)}\n`;
+
+      if (options.functional) {
+        component += 'module.exports = { functional: true, render: render };';
+      } else {
+        component += 'module.exports = { render: render };';
+      }
 
       cb(null, component);
     })
