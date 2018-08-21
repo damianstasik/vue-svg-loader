@@ -21,12 +21,12 @@ module.exports = function (content) {
         preserveWhitespace: false,
       });
       
-      const transpileCode = `var render = function (${options.functional ? '_h,_vm' : ''}) { ${compiled.render} };`;
+      const transpileCode = `var render = function (${options.functional ? '_h, _vm' : ''}) { ${compiled.render} };`;
 
       const transpileOptions = {
         transforms: {
           stripWithFunctional: !!options.functional || false,
-        }
+        },
       };
 
       component = `${transpile(transpileCode, transpileOptions)}\n`;
