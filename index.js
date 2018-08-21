@@ -25,8 +25,7 @@ module.exports = function (content) {
 
       const transpileOptions = {
         transforms: {
-          stripWith: true,
-          stripWithFunctional: options.functional || false
+          stripWithFunctional: !!options.functional || false,
         }
       };
 
