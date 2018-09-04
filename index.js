@@ -17,7 +17,7 @@ module.exports = function (content) {
   svg
     .optimize(content, { path })
     .then((result) => {
-      let template = result.data
+      let template = result.data;
 
       // https://github.com/vuejs/vue-loader/issues/1014
       if (options.functional) {
