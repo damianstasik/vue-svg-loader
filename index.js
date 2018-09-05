@@ -4,8 +4,12 @@ const compiler = require('vue-template-compiler');
 const transpile = require('vue-template-es2015-compiler');
 
 module.exports = function (content) {
-  const options = loaderUtils.getOptions(this) || {};
-  const svg = new svgo(options.svgo || {});
+  const {
+    svgo: svgoOptions = {},
+    functional = false,
+  } = loaderUtils.getOptions(this) || {};
+
+  const svg = new svgo(svgoOptions);
   const path = this.resourcePath;
 
   this.cacheable && this.cacheable(true);
@@ -19,19 +23,29 @@ module.exports = function (content) {
     .then((result) => {
       const compiled = compiler.compile(result.data, {
         preserveWhitespace: false,
+        modules: [
+          !!functional && {
+            transformNode: (el) => {
+              if (el.tag === 'svg') {
+                el.classBinding = '[data.class, data.staticClass]';
+                el.styleBinding = '[data.style, data.staticStyle]';
+              }
+            },
+          }
+        ],
       });
       
-      const transpileCode = `var render = function (${options.functional ? '_h, _vm' : ''}) { ${compiled.render} };`;
+      const transpileCode = `var render = function (${functional ? '_h, _vm' : ''}) { ${compiled.render} };`;
 
       const transpileOptions = {
         transforms: {
-          stripWithFunctional: !!options.functional || false,
+          stripWithFunctional: !!functional,
         },
       };
 
       component = `${transpile(transpileCode, transpileOptions)}\n`;
 
-      if (options.functional) {
+      if (functional) {
         component += 'module.exports = { functional: true, render: render };';
       } else {
         component += 'module.exports = { render: render };';
