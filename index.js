@@ -21,7 +21,14 @@ module.exports = function (content) {
   svg
     .optimize(content, { path })
     .then((result) => {
-      const compiled = compiler.compile(result.data, {
+      let template = result.data;
+
+      // https://github.com/vuejs/vue-loader/issues/1014
+      if (options.functional) {
+        template = template.replace(/<svg([^>]+)>/, `<svg$1 :class="[ data.class, data.staticClass ]" :style="[ data.style, data.staticStyle ]">`);
+      }
+
+      const compiled = compiler.compile(template, {
         preserveWhitespace: false,
         modules: [
           !!functional && {
