@@ -21,12 +21,12 @@
   "main": "index.js",
   "dependencies": {
     "loader-utils": "^1.1.0",
-    "svgo": "^1.0.4",
+    "svgo": "^1.1.1",
     "vue-template-compiler": "^2.5.17",
     "vue-template-es2015-compiler": "^1.6.0"
   },
   "devDependencies": {
-    "vue-tabs-component": "^1.4.0",
-    "vuepress": "^0.14.2"
+    "vue-tabs-component": "^1.5.0",
+    "vuepress": "^0.14.4"
   }
 }
