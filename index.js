@@ -1,27 +1,31 @@
-const svgo = require('svgo');
-const loaderUtils = require('loader-utils');
-const compiler = require('vue-template-compiler');
-const transpile = require('vue-template-es2015-compiler');
+const SVGO = require('svgo');
+const { getOptions } = require('loader-utils');
+const { compile } = require('vue-template-compiler');
+const stripWith = require('vue-template-es2015-compiler');
+
+function getSvg(content, path, svgoConfig) {
+  if (svgoConfig === false) {
+    return Promise.resolve(content);
+  }
+
+  return new SVGO(svgoConfig)
+    .optimize(content, { path })
+    .then(result => result.data);
+};
 
 module.exports = function (content) {
-  const {
-    svgo: svgoOptions = {},
-    functional = false,
-  } = loaderUtils.getOptions(this) || {};
-
-  const svg = new svgo(svgoOptions);
   const path = this.resourcePath;
+  const callback = this.async();
+  const options = getOptions(this) || {};
 
-  this.cacheable && this.cacheable(true);
-  this.addDependency(path);
+  const {
+    svgo: svgoConfig = {},
+    functional = false,
+  } = options;
 
-  const cb = this.async();
-  let component;
-
-  svg
-    .optimize(content, { path })
+  getSvg(content, path, svgoConfig)
     .then((result) => {
-      const compiled = compiler.compile(result.data, {
+      let { render: renderFn } = compile(result, {
         preserveWhitespace: false,
         modules: [
           !!functional && {
@@ -31,27 +35,32 @@ module.exports = function (content) {
                 el.styleBinding = '[data.style, data.staticStyle]';
               }
             },
-          }
+          },
         ],
       });
-      
-      const transpileCode = `var render = function (${functional ? '_h, _vm' : ''}) { ${compiled.render} };`;
 
-      const transpileOptions = {
+      renderFn = `
+        function render(${functional ? '_h, _vm' : ''}) {
+          ${renderFn};
+        };
+      `;
+
+      renderFn = stripWith(renderFn, {
         transforms: {
           stripWithFunctional: !!functional,
         },
-      };
+      });
 
-      component = `${transpile(transpileCode, transpileOptions)}\n`;
+      const component = `
+        ${renderFn}
 
-      if (functional) {
-        component += 'module.exports = { functional: true, render: render };';
-      } else {
-        component += 'module.exports = { render: render };';
-      }
+        module.exports = {
+          ${functional ? 'functional: true,' : ''}
+          render: render,
+        };
+      `;
 
-      cb(null, component);
+      callback(null, component);
     })
-    .catch(cb);
+    .catch(callback);
 };
