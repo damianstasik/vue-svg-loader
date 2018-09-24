@@ -892,8 +892,8 @@ ajv-keywords@^3.0.0, ajv-keywords@^3.1.0:
   resolved "https://registry.yarnpkg.com/ajv-keywords/-/ajv-keywords-3.2.0.tgz#e86b819c602cf8821ad637413698f1dec021847a"
 
 ajv@^6.0.1, ajv@^6.1.0:
-  version "6.5.3"
-  resolved "https://registry.yarnpkg.com/ajv/-/ajv-6.5.3.tgz#71a569d189ecf4f4f321224fecb166f071dd90f9"
+  version "6.5.4"
+  resolved "https://registry.yarnpkg.com/ajv/-/ajv-6.5.4.tgz#247d5274110db653706b550fcc2b797ca28cfc59"
   dependencies:
     fast-deep-equal "^2.0.1"
     fast-json-stable-stringify "^2.0.0"
@@ -935,8 +935,8 @@ ansi-align@^2.0.0:
     string-width "^2.0.0"
 
 ansi-colors@^3.0.0:
-  version "3.0.5"
-  resolved "https://registry.yarnpkg.com/ansi-colors/-/ansi-colors-3.0.5.tgz#cb9dc64993b64fd6945485f797fc3853137d9a7b"
+  version "3.0.6"
+  resolved "https://registry.yarnpkg.com/ansi-colors/-/ansi-colors-3.0.6.tgz#a0b9e00e8c1cc6685b1c3130dbeb9abed03ca6a4"
 
 ansi-escapes@^3.0.0:
   version "3.1.0"
@@ -1200,8 +1200,8 @@ big.js@^3.1.3:
   resolved "https://registry.yarnpkg.com/big.js/-/big.js-3.2.0.tgz#a5fc298b81b9e0dca2e458824784b65c52ba588e"
 
 binary-extensions@^1.0.0:
-  version "1.11.0"
-  resolved "https://registry.yarnpkg.com/binary-extensions/-/binary-extensions-1.11.0.tgz#46aa1751fb6a2f93ee5e689bb1087d4b14c6c205"
+  version "1.12.0"
+  resolved "https://registry.yarnpkg.com/binary-extensions/-/binary-extensions-1.12.0.tgz#c2d780f53d45bba8317a8902d4ceeaf3a6385b14"
 
 bluebird@^3.1.1, bluebird@^3.5.1:
   version "3.5.2"
@@ -1433,12 +1433,12 @@ caniuse-api@^1.5.2:
     lodash.uniq "^4.5.0"
 
 caniuse-db@^1.0.30000529, caniuse-db@^1.0.30000634, caniuse-db@^1.0.30000639:
-  version "1.0.30000885"
-  resolved "https://registry.yarnpkg.com/caniuse-db/-/caniuse-db-1.0.30000885.tgz#cdc98dd168ed59678650071f7f6a70910e275bc8"
+  version "1.0.30000887"
+  resolved "https://registry.yarnpkg.com/caniuse-db/-/caniuse-db-1.0.30000887.tgz#9abf538610e3349870ed525f7062de649cc3c570"
 
 caniuse-lite@^1.0.30000844, caniuse-lite@^1.0.30000864:
-  version "1.0.30000885"
-  resolved "https://registry.yarnpkg.com/caniuse-lite/-/caniuse-lite-1.0.30000885.tgz#e889e9f8e7e50e769f2a49634c932b8aee622984"
+  version "1.0.30000887"
+  resolved "https://registry.yarnpkg.com/caniuse-lite/-/caniuse-lite-1.0.30000887.tgz#1769458c27bbdcf61b0cb6b5072bb6cd11fd9c23"
 
 capture-stack-trace@^1.0.0:
   version "1.0.1"
@@ -1492,8 +1492,8 @@ chrome-trace-event@^1.0.0:
     tslib "^1.9.0"
 
 ci-info@^1.5.0:
-  version "1.5.1"
-  resolved "https://registry.yarnpkg.com/ci-info/-/ci-info-1.5.1.tgz#17e8eb5de6f8b2b6038f0cbb714d410bfa9f3030"
+  version "1.6.0"
+  resolved "https://registry.yarnpkg.com/ci-info/-/ci-info-1.6.0.tgz#2ca20dbb9ceb32d4524a683303313f0304b1e497"
 
 cipher-base@^1.0.0, cipher-base@^1.0.1, cipher-base@^1.0.3:
   version "1.0.4"
@@ -1585,9 +1585,13 @@ color-convert@^1.3.0, color-convert@^1.9.0:
   dependencies:
     color-name "1.1.3"
 
-color-name@1.1.3, color-name@^1.0.0:
+color-name@1.1.3:
   version "1.1.3"
   resolved "https://registry.yarnpkg.com/color-name/-/color-name-1.1.3.tgz#a7d0558bd89c42f795dd42328f740831ca53bc25"
+
+color-name@^1.0.0:
+  version "1.1.4"
+  resolved "https://registry.yarnpkg.com/color-name/-/color-name-1.1.4.tgz#c2a09a87acbde69543de6f63fa3995c826c536a2"
 
 color-string@^0.3.0:
   version "0.3.0"
@@ -2213,8 +2217,8 @@ ee-first@1.1.1:
   resolved "https://registry.yarnpkg.com/ee-first/-/ee-first-1.1.1.tgz#590c61156b0ae2f4f0255732a158b266bc56b21d"
 
 electron-to-chromium@^1.2.7, electron-to-chromium@^1.3.47:
-  version "1.3.68"
-  resolved "https://registry.yarnpkg.com/electron-to-chromium/-/electron-to-chromium-1.3.68.tgz#bb3ccbadcdd06de2afea8fb73e31a60b6558de1f"
+  version "1.3.70"
+  resolved "https://registry.yarnpkg.com/electron-to-chromium/-/electron-to-chromium-1.3.70.tgz#ded377256d92d81b4257d36c65aa890274afcfd2"
 
 elliptic@^6.0.0:
   version "6.4.1"
@@ -2830,9 +2834,13 @@ hash.js@^1.0.0, hash.js@^1.0.3:
     inherits "^2.0.3"
     minimalistic-assert "^1.0.1"
 
-he@1.1.x, he@^1.1.0:
+he@1.1.x:
   version "1.1.1"
   resolved "https://registry.yarnpkg.com/he/-/he-1.1.1.tgz#93410fd21b009735151f8868c2f271f3427e23fd"
+
+he@^1.1.0:
+  version "1.2.0"
+  resolved "https://registry.yarnpkg.com/he/-/he-1.2.0.tgz#84ae65fa7eafb165fddb61566ae14baf05664f0f"
 
 hmac-drbg@^1.0.0:
   version "1.0.1"
@@ -3046,7 +3054,7 @@ is-buffer@^1.1.5:
 
 is-builtin-module@^1.0.0:
   version "1.0.0"
-  resolved "https://registry.yarnpkg.com/is-builtin-module/-/is-builtin-module-1.0.0.tgz#540572d34f7ac3119f8f76c30cbc1b1e037affbe"
+  resolved "http://registry.npmjs.org/is-builtin-module/-/is-builtin-module-1.0.0.tgz#540572d34f7ac3119f8f76c30cbc1b1e037affbe"
   dependencies:
     builtin-modules "^1.0.0"
 
@@ -3240,8 +3248,10 @@ is-svg@^2.0.0:
     html-comment-regex "^1.1.0"
 
 is-symbol@^1.0.1:
-  version "1.0.1"
-  resolved "https://registry.yarnpkg.com/is-symbol/-/is-symbol-1.0.1.tgz#3cc59f00025194b6ab2e38dbae6689256b660572"
+  version "1.0.2"
+  resolved "https://registry.yarnpkg.com/is-symbol/-/is-symbol-1.0.2.tgz#a055f6ae57192caee329e7a860118b497a950f38"
+  dependencies:
+    has-symbols "^1.0.0"
 
 is-windows@^1.0.2:
   version "1.0.2"
@@ -3505,8 +3515,8 @@ load-script@^1.0.0:
   resolved "https://registry.yarnpkg.com/load-script/-/load-script-1.0.0.tgz#0491939e0bee5643ee494a7e3da3d2bac70c6ca4"
 
 loader-runner@^2.3.0:
-  version "2.3.0"
-  resolved "https://registry.yarnpkg.com/loader-runner/-/loader-runner-2.3.0.tgz#f482aea82d543e07921700d5a46ef26fdac6b8a2"
+  version "2.3.1"
+  resolved "https://registry.yarnpkg.com/loader-runner/-/loader-runner-2.3.1.tgz#026f12fe7c3115992896ac02ba022ba92971b979"
 
 loader-utils@^0.2.16:
   version "0.2.17"
@@ -3812,8 +3822,8 @@ min-document@^2.19.0:
     dom-walk "^0.1.0"
 
 mini-css-extract-plugin@^0.4.1:
-  version "0.4.2"
-  resolved "https://registry.yarnpkg.com/mini-css-extract-plugin/-/mini-css-extract-plugin-0.4.2.tgz#b3ecc0d6b1bbe5ff14add42b946a7b200cf78651"
+  version "0.4.3"
+  resolved "https://registry.yarnpkg.com/mini-css-extract-plugin/-/mini-css-extract-plugin-0.4.3.tgz#98d60fcc5d228c3e36a9bd15a1d6816d6580beb8"
   dependencies:
     loader-utils "^1.1.0"
     schema-utils "^1.0.0"
@@ -3966,8 +3976,8 @@ nanotiming@^7.2.0:
     nanoscheduler "^1.0.2"
 
 needle@^2.2.1:
-  version "2.2.3"
-  resolved "https://registry.yarnpkg.com/needle/-/needle-2.2.3.tgz#c1b04da378cd634d8befe2de965dc2cfb0fd65ca"
+  version "2.2.4"
+  resolved "https://registry.yarnpkg.com/needle/-/needle-2.2.4.tgz#51931bff82533b1928b7d1d69e01f1b00ffd2a4e"
   dependencies:
     debug "^2.1.2"
     iconv-lite "^0.4.4"
@@ -4206,8 +4216,8 @@ only@~0.0.2:
   resolved "https://registry.yarnpkg.com/only/-/only-0.0.2.tgz#2afde84d03e50b9a8edc444e30610a70295edfb4"
 
 opn@^5.1.0:
-  version "5.3.0"
-  resolved "https://registry.yarnpkg.com/opn/-/opn-5.3.0.tgz#64871565c863875f052cfdf53d3e3cb5adb53b1c"
+  version "5.4.0"
+  resolved "https://registry.yarnpkg.com/opn/-/opn-5.4.0.tgz#cb545e7aab78562beb11aa3bfabc7042e1761035"
   dependencies:
     is-wsl "^1.1.0"
 
@@ -4861,7 +4871,7 @@ redent@^2.0.0:
 
 reduce-css-calc@^1.2.6:
   version "1.3.0"
-  resolved "https://registry.yarnpkg.com/reduce-css-calc/-/reduce-css-calc-1.3.0.tgz#747c914e049614a4c9cfbba629871ad1d2927716"
+  resolved "http://registry.npmjs.org/reduce-css-calc/-/reduce-css-calc-1.3.0.tgz#747c914e049614a4c9cfbba629871ad1d2927716"
   dependencies:
     balanced-match "^0.4.2"
     math-expression-evaluator "^1.2.14"
@@ -5453,6 +5463,14 @@ supports-color@^5.3.0, supports-color@^5.4.0:
   dependencies:
     has-flag "^3.0.0"
 
+svg-to-vue@^0.1.0:
+  version "0.1.0"
+  resolved "https://registry.yarnpkg.com/svg-to-vue/-/svg-to-vue-0.1.0.tgz#b6a689805290d4ef486591ba1fb98c9c5af7fce0"
+  dependencies:
+    svgo "^1.1.1"
+    vue-template-compiler "^2.5.17"
+    vue-template-es2015-compiler "^1.6.0"
+
 svgo@^0.7.0:
   version "0.7.2"
   resolved "https://registry.yarnpkg.com/svgo/-/svgo-0.7.2.tgz#9f5772413952135c6fefbf40afe6a4faa88b4bb5"
@@ -5715,14 +5733,14 @@ uniqs@^2.0.0:
   resolved "https://registry.yarnpkg.com/uniqs/-/uniqs-2.0.0.tgz#ffede4b36b25290696e6e165d4a59edb998e6b02"
 
 unique-filename@^1.1.0:
-  version "1.1.0"
-  resolved "https://registry.yarnpkg.com/unique-filename/-/unique-filename-1.1.0.tgz#d05f2fe4032560871f30e93cbe735eea201514f3"
+  version "1.1.1"
+  resolved "https://registry.yarnpkg.com/unique-filename/-/unique-filename-1.1.1.tgz#1d69769369ada0583103a1e6ae87681b56573230"
   dependencies:
     unique-slug "^2.0.0"
 
 unique-slug@^2.0.0:
-  version "2.0.0"
-  resolved "https://registry.yarnpkg.com/unique-slug/-/unique-slug-2.0.0.tgz#db6676e7c7cc0629878ff196097c78855ae9f4ab"
+  version "2.0.1"
+  resolved "https://registry.yarnpkg.com/unique-slug/-/unique-slug-2.0.1.tgz#5e9edc6d1ce8fb264db18a507ef9bd8544451ca6"
   dependencies:
     imurmurhash "^0.1.4"
 
@@ -5878,8 +5896,8 @@ vm-browserify@0.0.4:
     indexof "0.0.1"
 
 vue-hot-reload-api@^2.3.0:
-  version "2.3.0"
-  resolved "https://registry.yarnpkg.com/vue-hot-reload-api/-/vue-hot-reload-api-2.3.0.tgz#97976142405d13d8efae154749e88c4e358cf926"
+  version "2.3.1"
+  resolved "https://registry.yarnpkg.com/vue-hot-reload-api/-/vue-hot-reload-api-2.3.1.tgz#b2d3d95402a811602380783ea4f566eb875569a2"
 
 vue-loader@^15.2.4:
   version "15.4.2"
@@ -6096,15 +6114,15 @@ webpack-serve@^1.0.2:
     webpack-log "^1.1.2"
 
 webpack-sources@^1.1.0, webpack-sources@^1.2.0:
-  version "1.2.0"
-  resolved "https://registry.yarnpkg.com/webpack-sources/-/webpack-sources-1.2.0.tgz#18181e0d013fce096faf6f8e6d41eeffffdceac2"
+  version "1.3.0"
+  resolved "https://registry.yarnpkg.com/webpack-sources/-/webpack-sources-1.3.0.tgz#2a28dcb9f1f45fe960d8f1493252b5ee6530fa85"
   dependencies:
     source-list-map "^2.0.0"
     source-map "~0.6.1"
 
 webpack@^4.8.1:
-  version "4.19.0"
-  resolved "https://registry.yarnpkg.com/webpack/-/webpack-4.19.0.tgz#252296c8af2d21c0994911007defdb3913a7bc66"
+  version "4.19.1"
+  resolved "https://registry.yarnpkg.com/webpack/-/webpack-4.19.1.tgz#096674bc3b573f8756c762754366e5b333d6576f"
   dependencies:
     "@webassemblyjs/ast" "1.7.6"
     "@webassemblyjs/helper-module-context" "1.7.6"
@@ -6172,21 +6190,21 @@ widest-line@^2.0.0:
   dependencies:
     string-width "^2.1.1"
 
-workbox-background-sync@^3.5.0:
-  version "3.5.0"
-  resolved "https://registry.yarnpkg.com/workbox-background-sync/-/workbox-background-sync-3.5.0.tgz#bc9a6fe58dd7e3c3b235225a35894e3f567965a0"
+workbox-background-sync@^3.6.1:
+  version "3.6.1"
+  resolved "https://registry.yarnpkg.com/workbox-background-sync/-/workbox-background-sync-3.6.1.tgz#4d8b91b21e26e94eeb259a156c15ad139edb2584"
   dependencies:
-    workbox-core "^3.5.0"
+    workbox-core "^3.6.1"
 
-workbox-broadcast-cache-update@^3.5.0:
-  version "3.5.0"
-  resolved "https://registry.yarnpkg.com/workbox-broadcast-cache-update/-/workbox-broadcast-cache-update-3.5.0.tgz#3be074b5abb333decd27fa2b31c39b643cdaad3f"
+workbox-broadcast-cache-update@^3.6.1:
+  version "3.6.1"
+  resolved "https://registry.yarnpkg.com/workbox-broadcast-cache-update/-/workbox-broadcast-cache-update-3.6.1.tgz#3069bf159cfa7f948e08df50486b22fae0f901ce"
   dependencies:
-    workbox-core "^3.5.0"
+    workbox-core "^3.6.1"
 
 workbox-build@^3.1.0:
-  version "3.5.0"
-  resolved "https://registry.yarnpkg.com/workbox-build/-/workbox-build-3.5.0.tgz#893e31b1e28727ac0ec993222b9c132f77ea4607"
+  version "3.6.1"
+  resolved "https://registry.yarnpkg.com/workbox-build/-/workbox-build-3.6.1.tgz#8a6099d443fb43432727ed2020edba4dc6885d16"
   dependencies:
     babel-runtime "^6.26.0"
     common-tags "^1.4.0"
@@ -6197,84 +6215,84 @@ workbox-build@^3.1.0:
     pretty-bytes "^4.0.2"
     stringify-object "^3.2.2"
     strip-comments "^1.0.2"
-    workbox-background-sync "^3.5.0"
-    workbox-broadcast-cache-update "^3.5.0"
-    workbox-cache-expiration "^3.5.0"
-    workbox-cacheable-response "^3.5.0"
-    workbox-core "^3.5.0"
-    workbox-google-analytics "^3.5.0"
-    workbox-navigation-preload "^3.5.0"
-    workbox-precaching "^3.5.0"
-    workbox-range-requests "^3.5.0"
-    workbox-routing "^3.5.0"
-    workbox-strategies "^3.5.0"
-    workbox-streams "^3.5.0"
-    workbox-sw "^3.5.0"
+    workbox-background-sync "^3.6.1"
+    workbox-broadcast-cache-update "^3.6.1"
+    workbox-cache-expiration "^3.6.1"
+    workbox-cacheable-response "^3.6.1"
+    workbox-core "^3.6.1"
+    workbox-google-analytics "^3.6.1"
+    workbox-navigation-preload "^3.6.1"
+    workbox-precaching "^3.6.1"
+    workbox-range-requests "^3.6.1"
+    workbox-routing "^3.6.1"
+    workbox-strategies "^3.6.1"
+    workbox-streams "^3.6.1"
+    workbox-sw "^3.6.1"
 
-workbox-cache-expiration@^3.5.0:
-  version "3.5.0"
-  resolved "https://registry.yarnpkg.com/workbox-cache-expiration/-/workbox-cache-expiration-3.5.0.tgz#bc6ee8e6105c0251d6331a772cf48c6a77470fb9"
+workbox-cache-expiration@^3.6.1:
+  version "3.6.1"
+  resolved "https://registry.yarnpkg.com/workbox-cache-expiration/-/workbox-cache-expiration-3.6.1.tgz#68f7ae9c0d0df94b74917201ae8b6dc5dd7d431c"
   dependencies:
-    workbox-core "^3.5.0"
+    workbox-core "^3.6.1"
 
-workbox-cacheable-response@^3.5.0:
-  version "3.5.0"
-  resolved "https://registry.yarnpkg.com/workbox-cacheable-response/-/workbox-cacheable-response-3.5.0.tgz#5073dbfb905639caac15285e31d779203fc9f66e"
+workbox-cacheable-response@^3.6.1:
+  version "3.6.1"
+  resolved "https://registry.yarnpkg.com/workbox-cacheable-response/-/workbox-cacheable-response-3.6.1.tgz#c3c5bb23363251c4888de89848cf42fb9ebbd3e4"
   dependencies:
-    workbox-core "^3.5.0"
+    workbox-core "^3.6.1"
 
-workbox-core@^3.5.0:
-  version "3.5.0"
-  resolved "https://registry.yarnpkg.com/workbox-core/-/workbox-core-3.5.0.tgz#42d19d4322bfa17a67ab8a58f474784ae8dd8e80"
+workbox-core@^3.6.1:
+  version "3.6.1"
+  resolved "https://registry.yarnpkg.com/workbox-core/-/workbox-core-3.6.1.tgz#925605589d0d64c4aa6417e3a9ef3211a09c8839"
 
-workbox-google-analytics@^3.5.0:
-  version "3.5.0"
-  resolved "https://registry.yarnpkg.com/workbox-google-analytics/-/workbox-google-analytics-3.5.0.tgz#fb4af515ecd207054370beae2917b08c7e9175dc"
+workbox-google-analytics@^3.6.1:
+  version "3.6.1"
+  resolved "https://registry.yarnpkg.com/workbox-google-analytics/-/workbox-google-analytics-3.6.1.tgz#5e5dbcecdfc59836a554357ec80358cacace9b94"
   dependencies:
-    workbox-background-sync "^3.5.0"
-    workbox-core "^3.5.0"
-    workbox-routing "^3.5.0"
-    workbox-strategies "^3.5.0"
+    workbox-background-sync "^3.6.1"
+    workbox-core "^3.6.1"
+    workbox-routing "^3.6.1"
+    workbox-strategies "^3.6.1"
 
-workbox-navigation-preload@^3.5.0:
-  version "3.5.0"
-  resolved "https://registry.yarnpkg.com/workbox-navigation-preload/-/workbox-navigation-preload-3.5.0.tgz#3d2514976ce2a1208c92e29dac2cb2976636f18d"
+workbox-navigation-preload@^3.6.1:
+  version "3.6.1"
+  resolved "https://registry.yarnpkg.com/workbox-navigation-preload/-/workbox-navigation-preload-3.6.1.tgz#c1184f455a502222746a1a15bf5f61b24f9d926d"
   dependencies:
-    workbox-core "^3.5.0"
+    workbox-core "^3.6.1"
 
-workbox-precaching@^3.5.0:
-  version "3.5.0"
-  resolved "https://registry.yarnpkg.com/workbox-precaching/-/workbox-precaching-3.5.0.tgz#5b92690f424fe4c438c11823363e7468e5af8bf4"
+workbox-precaching@^3.6.1:
+  version "3.6.1"
+  resolved "https://registry.yarnpkg.com/workbox-precaching/-/workbox-precaching-3.6.1.tgz#edfbbca545df74bd30e7dd03f90d695217a2772d"
   dependencies:
-    workbox-core "^3.5.0"
+    workbox-core "^3.6.1"
 
-workbox-range-requests@^3.5.0:
-  version "3.5.0"
-  resolved "https://registry.yarnpkg.com/workbox-range-requests/-/workbox-range-requests-3.5.0.tgz#fe4cb1f67be015eeef379c0dd479c31436a1a53d"
+workbox-range-requests@^3.6.1:
+  version "3.6.1"
+  resolved "https://registry.yarnpkg.com/workbox-range-requests/-/workbox-range-requests-3.6.1.tgz#f997e4b946d63bc09cc9f178e287900c17e144fd"
   dependencies:
-    workbox-core "^3.5.0"
+    workbox-core "^3.6.1"
 
-workbox-routing@^3.5.0:
-  version "3.5.0"
-  resolved "https://registry.yarnpkg.com/workbox-routing/-/workbox-routing-3.5.0.tgz#93ab4037b49f243c5b5cc7a09b2b391700cdb4d1"
+workbox-routing@^3.6.1:
+  version "3.6.1"
+  resolved "https://registry.yarnpkg.com/workbox-routing/-/workbox-routing-3.6.1.tgz#4cd41e319d0dc9df5db36c7d2054e829855f14e8"
   dependencies:
-    workbox-core "^3.5.0"
+    workbox-core "^3.6.1"
 
-workbox-strategies@^3.5.0:
-  version "3.5.0"
-  resolved "https://registry.yarnpkg.com/workbox-strategies/-/workbox-strategies-3.5.0.tgz#13cb04776cad4fa8b758b155245119909119cea6"
+workbox-strategies@^3.6.1:
+  version "3.6.1"
+  resolved "https://registry.yarnpkg.com/workbox-strategies/-/workbox-strategies-3.6.1.tgz#a397ea2f14a1a926276a4f3e87b689409cfb8c6e"
   dependencies:
-    workbox-core "^3.5.0"
+    workbox-core "^3.6.1"
 
-workbox-streams@^3.5.0:
-  version "3.5.0"
-  resolved "https://registry.yarnpkg.com/workbox-streams/-/workbox-streams-3.5.0.tgz#a2295c5e28f05eecb3c275296e1f67e2f07d2eac"
+workbox-streams@^3.6.1:
+  version "3.6.1"
+  resolved "https://registry.yarnpkg.com/workbox-streams/-/workbox-streams-3.6.1.tgz#ca3362c67e94408e72fcbf7bc5f7144a7463eb50"
   dependencies:
-    workbox-core "^3.5.0"
+    workbox-core "^3.6.1"
 
-workbox-sw@^3.5.0:
-  version "3.5.0"
-  resolved "https://registry.yarnpkg.com/workbox-sw/-/workbox-sw-3.5.0.tgz#492a9b99f110d52f7ebda8bd0b045f0484685dae"
+workbox-sw@^3.6.1:
+  version "3.6.1"
+  resolved "https://registry.yarnpkg.com/workbox-sw/-/workbox-sw-3.6.1.tgz#98d73e27bb1ac65332d71041dce99dcc84c7d2bc"
 
 worker-farm@^1.5.2:
   version "1.6.0"
