@@ -69,26 +69,26 @@ module.exports = {
       Vue
     </a>
     <a href="https://github.com/svg/svgo">
-      <SVGOIcon />
+      <SVGOLogo />
       SVGO
     </a>
     <a href="https://github.com/webpack/webpack">
-      <WebpackIcon />
+      <WebpackLogo />
       webpack
     </a>
   </nav>
 </template>
 <script>
 import VueLogo from './public/vue.svg';
-import SVGOIcon from './public/svgo.svg';
-import WebpackIcon from './public/webpack.svg';
+import SVGOLogo from './public/svgo.svg';
+import WebpackLogo from './public/webpack.svg';
 
 export default {
   name: 'Example',
   components: {
     VueLogo,
-    SVGOIcon,
-    WebpackIcon,
+    SVGOLogo,
+    WebpackLogo,
   },
 };
 </script>
