@@ -1,30 +1,30 @@
 <template>
   <nav>
     <a href="https://github.com/vuejs/vue" class="btn btn-vue">
-      <VueLogo class="icon" />
+      <VueLogo class="logo" />
       Vue
     </a>
     <a href="https://github.com/svg/svgo" class="btn btn-svgo">
-      <SVGOIcon class="icon" />
+      <SVGOLogo class="logo" />
       SVGO
     </a>
     <a href="https://github.com/webpack/webpack" class="btn btn-webpack">
-      <WebpackIcon class="icon" />
+      <WebpackLogo class="logo" />
       webpack
     </a>
   </nav>
 </template>
 <script>
 import VueLogo from './public/vue.svg';
-import SVGOIcon from './public/svgo.svg';
-import WebpackIcon from './public/webpack.svg';
+import SVGOLogo from './public/svgo.svg';
+import WebpackLogo from './public/webpack.svg';
 
 export default {
   name: 'Example',
   components: {
     VueLogo,
-    SVGOIcon,
-    WebpackIcon,
+    SVGOLogo,
+    WebpackLogo,
   },
 };
 </script>
@@ -42,7 +42,7 @@ export default {
 .btn-svgo { color: #2364c0; }
 .btn-webpack { color: #1d78c1; }
 
-.icon {
+.logo {
   width: 28px;
   height: 28px;
   margin-right: 10px;
