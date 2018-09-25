@@ -5463,9 +5463,9 @@ supports-color@^5.3.0, supports-color@^5.4.0:
   dependencies:
     has-flag "^3.0.0"
 
-svg-to-vue@^0.1.0:
-  version "0.1.0"
-  resolved "https://registry.yarnpkg.com/svg-to-vue/-/svg-to-vue-0.1.0.tgz#b6a689805290d4ef486591ba1fb98c9c5af7fce0"
+svg-to-vue@^0.2.1:
+  version "0.2.1"
+  resolved "https://registry.yarnpkg.com/svg-to-vue/-/svg-to-vue-0.2.1.tgz#cdb404d032537d8e8a370d5d1f30016dcb6b9894"
   dependencies:
     svgo "^1.1.1"
     vue-template-compiler "^2.5.17"
