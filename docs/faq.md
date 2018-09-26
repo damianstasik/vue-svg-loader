@@ -110,7 +110,11 @@ export {
   name: 'Example',
   components: {
     InlineSVG,
-    ExternalSVG,
+  },
+  computed: {
+    externalSVG() {
+      return ExternalSVG;
+    },
   },
 };
 </script>
