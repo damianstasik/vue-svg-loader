@@ -84,9 +84,9 @@ Similarly to Vue CLI, you need to modify existing rule (in `nuxt.config.js`) tha
 module.exports = {
   build: {
     extend: (config) => {
-      const svgRule = config.module.rules.find(rule => rule.loader === 'url-loader');
+      const svgRule = config.module.rules.find(rule => rule.test.test('.svg'));
 
-      svgRule.test = /\.(png|jpe?g|gif)$/;
+      svgRule.test = /\.(png|jpe?g|gif|webp)$/;
 
       config.module.rules.push({
         test: /\.svg$/,
