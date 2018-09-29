@@ -42,14 +42,14 @@ module.exports = {
 };
 ```
 
-### Nuxt.js
+### Nuxt.js (1.x / 2.x)
 ``` js
 module.exports = {
   build: {
     extend: (config) => {
-      const svgRule = config.module.rules.find(rule => rule.loader === 'url-loader');
+      const svgRule = config.module.rules.find(rule => rule.test.test('.svg'));
 
-      svgRule.test = /\.(png|jpe?g|gif)$/;
+      svgRule.test = /\.(png|jpe?g|gif|webp)$/;
 
       config.module.rules.push({
         test: /\.svg$/,
