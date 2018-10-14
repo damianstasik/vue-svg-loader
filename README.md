@@ -60,6 +60,9 @@ module.exports = {
 };
 ```
 
+For Nuxt 2, there is also a wrapper called [nuxt-svg-loader](https://github.com/Developmint/nuxt-svg-loader)
+
+
 ## Example usage
 ``` vue
 <template>
