@@ -1,4 +1,4 @@
-<p align="center"><img src="docs/.vuepress/public/logo.svg" width="40%"></p>
+<p align="center"><img src="docs/.vuepress/public/logo.svg?sanitize=true" width="40%"></p>
 <h1 align="center">vue-svg-loader</h1>
 <p align="center">webpack loader that lets you use SVG files as Vue components</p>
 <p align="center">
