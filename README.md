@@ -7,6 +7,8 @@
 </p>
 
 ## Installation
+[![FOSSA Status](https://app.fossa.io/api/projects/git%2Bgithub.com%2Fvisualfanatic%2Fvue-svg-loader.svg?type=shield)](https://app.fossa.io/projects/git%2Bgithub.com%2Fvisualfanatic%2Fvue-svg-loader?ref=badge_shield)
+
 ``` bash
 npm i -D vue-svg-loader
 
@@ -93,3 +95,7 @@ export default {
 };
 </script>
 ```
+
+
+## License
+[![FOSSA Status](https://app.fossa.io/api/projects/git%2Bgithub.com%2Fvisualfanatic%2Fvue-svg-loader.svg?type=large)](https://app.fossa.io/projects/git%2Bgithub.com%2Fvisualfanatic%2Fvue-svg-loader?ref=badge_large)
