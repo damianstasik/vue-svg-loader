@@ -25,6 +25,6 @@
   },
   "devDependencies": {
     "vue-tabs-component": "^1.5.0",
-    "vuepress": "^0.14.4"
+    "vuepress": "^0.14.5"
   }
 }
