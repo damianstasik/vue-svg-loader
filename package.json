@@ -21,7 +21,7 @@
   "main": "index.js",
   "dependencies": {
     "loader-utils": "^1.1.0",
-    "svg-to-vue": "^0.4.0-alpha.1"
+    "svg-to-vue": "next"
   },
   "devDependencies": {
     "vue-tabs-component": "^1.5.0",
