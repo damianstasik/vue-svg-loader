@@ -21,10 +21,10 @@
   "main": "index.js",
   "dependencies": {
     "loader-utils": "^1.1.0",
-    "svg-to-vue": "^0.3.0"
+    "svg-to-vue": "^0.4.0-alpha.1"
   },
   "devDependencies": {
     "vue-tabs-component": "^1.5.0",
-    "vuepress": "^0.14.5"
+    "vuepress": "^0.14.7"
   }
 }
