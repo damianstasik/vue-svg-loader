@@ -1,7 +1,7 @@
 {
   "name": "vue-svg-loader",
   "description": "Use SVG files as Vue Components",
-  "version": "0.12.0-alpha.1",
+  "version": "0.12.0",
   "keywords": [
     "vue-svg-loader",
     "svg",
@@ -20,11 +20,11 @@
   "author": "Damian Stasik <npm@coded.pl>",
   "main": "index.js",
   "dependencies": {
-    "loader-utils": "^1.1.0",
-    "svg-to-vue": "next"
+    "loader-utils": "^1.2.3",
+    "svg-to-vue": "^0.4.0"
   },
   "devDependencies": {
     "vue-tabs-component": "^1.5.0",
-    "vuepress": "^0.14.7"
+    "vuepress": "^0.14.8"
   }
 }
