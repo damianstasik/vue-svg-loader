@@ -319,6 +319,14 @@ declare module '*.svg' {
 }
 ```
 
+If you're using the `?inline` query, make sure to also include this:
+``` ts
+declare module '*.svg?inline' {
+  const content: any;
+  export default content;
+}
+```
+
 ## How to use this loader with Jest?
 
 There is one major issue when it comes to integrating vue-svg-loader with Jest, and it is async behaviour. Jest's transforms are synchronous, webpack loaders can be both. That means we cannot use SVGO to process the SVG files, which can be bad in some cases. It is always good idea to always pass the SVG files through SVGO before putting them in a project [(for example using this great tool)](https://jakearchibald.github.io/svgomg/), so that the end result does not contain:
