@@ -20,6 +20,8 @@
   "author": "Damian Stasik <npm@coded.pl>",
   "main": "index.js",
   "dependencies": {
+    "find-up": "^3.0.0",
+    "js-yaml": "^3.13.0",
     "loader-utils": "^1.1.0",
     "svg-to-vue": "^0.3.0"
   },
