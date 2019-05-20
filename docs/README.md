@@ -40,7 +40,7 @@ npm i -D vue-svg-loader
 
 ::: warning
 Make sure that your current configuration is not already processing the SVG files.
-Check this [FAQ](/faq#how-to-use-both-inline-and-external-svgs) section if you want to use both inline and external SVGs.
+Check this [FAQ](/faq.html#how-to-use-both-inline-and-external-svgs) section if you want to use both inline and external SVGs.
 :::
 
 ``` js
