@@ -42,6 +42,31 @@ module.exports = {
 };
 ```
 
+NOTE: When you want to support legacy browsers, you have to pass the generated JS also trough babel, as es6 syntax is used:
+
+``` js
+module.exports = {
+  chainWebpack: (config) => {
+    const svgRule = config.module.rule("svg")
+
+    svgRule.uses.clear()
+    svgRule
+      .use("babel-loader")
+      .loader("babel-loader")
+      .end()
+      .use("vue-svg-loader")
+      .loader("vue-svg-loader")
+      .options({
+        svgo: {
+          plugins: [{ removeDoctype: true }, { removeComments: true }, { removeViewBox: false }],
+          removeViewBox: false,
+        },
+      })
+      .end()
+  },
+};
+```
+
 ### Nuxt.js (1.x / 2.x)
 ``` js
 module.exports = {
