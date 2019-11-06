@@ -6,7 +6,7 @@ sidebar: auto
 
 ## How to use both inline and external SVGs?
 
-<Tabs>
+<Tabs :options="{ useUrlFragment: false }">
 <Tab name="webpack">
 
 ``` js
@@ -137,7 +137,7 @@ export {
 ## How to prefix `id` attributes?
 To avoid the situation where two or more SVGs are using the same `id` attribute, you can use the `prefixIds` option provided by `SVGO`.
 
-<Tabs>
+<Tabs :options="{ useUrlFragment: false }">
 <Tab name="webpack">
 
 ``` js
@@ -230,7 +230,7 @@ module.exports = {
 If you want to customize generated IDs, you can pass a function instead of `true` to the `prefixIds` plugin.
 Here is an example for generating IDs that are prefixed by the file name:
 
-<Tabs>
+<Tabs :options="{ useUrlFragment: false }">
 <Tab name="webpack">
 
 ``` js

@@ -11,7 +11,7 @@
     "vue"
   ],
   "scripts": {
-    "docs:serve": "vuepress dev docs",
+    "docs:dev": "vuepress dev docs",
     "docs:build": "vuepress build docs"
   },
   "bugs": "https://github.com/visualfanatic/vue-svg-loader/issues",

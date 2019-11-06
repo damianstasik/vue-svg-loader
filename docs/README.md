@@ -16,7 +16,7 @@ features:
 
 ## Installation
 
-<Tabs>
+<Tabs :options="{ useUrlFragment: false }">
 <Tab name="yarn">
 
 ``` bash
@@ -35,12 +35,12 @@ npm i -D vue-svg-loader vue-template-compiler
 
 ## Configuration
 
-<Tabs>
+<Tabs :options="{ useUrlFragment: false }">
 <Tab name="webpack">
 
 ::: warning
 Make sure that your current configuration is not already processing the SVG files.
-Check this [FAQ](/faq#how-to-use-both-inline-and-external-svgs) section if you want to use both inline and external SVGs.
+Check this [FAQ](/faq.html#how-to-use-both-inline-and-external-svgs) section if you want to use both inline and external SVGs.
 :::
 
 ``` js
@@ -49,7 +49,7 @@ module.exports = {
     rules: [
       {
         test: /\.svg$/,
-        loader: 'vue-svg-loader',
+        use: ['babel-loader', 'vue-svg-loader'],
       },
     ],
   },
@@ -69,6 +69,9 @@ module.exports = {
     svgRule.uses.clear();
 
     svgRule
+      .use('babel-loader')
+      .loader('babel-loader')
+      .end()
       .use('vue-svg-loader')
       .loader('vue-svg-loader');
   },
@@ -90,7 +93,7 @@ module.exports = {
 
       config.module.rules.push({
         test: /\.svg$/,
-        loader: 'vue-svg-loader',
+        use: ['babel-loader', 'vue-svg-loader'],
       });
     },
   },
