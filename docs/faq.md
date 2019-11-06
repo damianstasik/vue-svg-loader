@@ -18,7 +18,10 @@ module.exports = {
         oneOf: [
           {
             resourceQuery: /inline/,
-            loader: 'vue-svg-loader',
+            use: [
+              'babel-loader',
+              'vue-svg-loader',
+            ],
           },
           {
             loader: 'file-loader',
@@ -46,6 +49,9 @@ module.exports = {
     svgRule
       .oneOf('inline')
       .resourceQuery(/inline/)
+      .use('babel-loader')
+      .loader('babel-loader')
+      .end()
       .use('vue-svg-loader')
       .loader('vue-svg-loader')
       .end()
@@ -76,7 +82,10 @@ module.exports = {
         oneOf: [
           {
             resourceQuery: /inline/,
-            loader: 'vue-svg-loader',
+            use: [
+              'babel-loader',
+              'vue-svg-loader',
+            ],
           },
           {
             loader: 'file-loader',
@@ -137,14 +146,19 @@ module.exports = {
     rules: [
       {
         test: /\.svg$/,
-        loader: 'vue-svg-loader',
-        options: {
-          svgo: {
-            plugins: [
-              { prefixIds: true },
-            ],
+        use: [
+          'babel-loader',
+          {
+            loader: 'vue-svg-loader',
+            options: {
+              svgo: {
+                plugins: [
+                  { prefixIds: true },
+                ],
+              },
+            },
           },
-        },
+        ],
       },
     ],
   },
@@ -162,6 +176,9 @@ module.exports = {
     svgRule.uses.clear();
 
     svgRule
+      .use('babel-loader')
+      .loader('babel-loader')
+      .end()
       .use('vue-svg-loader')
       .loader('vue-svg-loader')
       .options({
@@ -188,14 +205,19 @@ module.exports = {
 
       config.module.rules.push({
         test: /\.svg$/,
-        loader: 'vue-svg-loader',
-        options: {
-          svgo: {
-            plugins: [
-              { prefixIds: true },
-            ],
+        use: [
+          'babel-loader',
+          {
+            loader: 'vue-svg-loader',
+            options: {
+              svgo: {
+                plugins: [
+                  { prefixIds: true },
+                ],
+              },
+            },
           },
-        },
+        ],
       });
     },
   },
@@ -219,19 +241,24 @@ module.exports = {
     rules: [
       {
         test: /\.svg$/,
-        loader: 'vue-svg-loader',
-        options: {
-          svgo: {
-            plugins: [
-              {
-                prefixIds: {
-                  prefix: (node, { path }) => basename(path, '.svg'),
-                  delim: '-',
-                },
+        use: [
+          'babel-loader',
+          {
+            loader: 'vue-svg-loader',
+            options: {
+              svgo: {
+                plugins: [
+                  {
+                    prefixIds: {
+                      prefix: (node, { path }) => basename(path, '.svg'),
+                      delim: '-',
+                    },
+                  },
+                ],
               },
-            ],
+            },
           },
-        },
+        ],
       },
     ],
   },
@@ -251,6 +278,9 @@ module.exports = {
     svgRule.uses.clear();
 
     svgRule
+      .use('babel-loader')
+      .loader('babel-loader')
+      .end()
       .use('vue-svg-loader')
       .loader('vue-svg-loader')
       .options({
@@ -284,19 +314,24 @@ module.exports = {
 
       config.module.rules.push({
         test: /\.svg$/,
-        loader: 'vue-svg-loader',
-        options: {
-          svgo: {
-            plugins: [
-              {
-                prefixIds: {
-                  prefix: (node, { path }) => basename(path, '.svg'),
-                  delim: '-',
-                },
+        use: [
+          'babel-loader',
+          {
+            loader: 'vue-svg-loader',
+            options: {
+              svgo: {
+                plugins: [
+                  {
+                    prefixIds: {
+                      prefix: (node, { path }) => basename(path, '.svg'),
+                      delim: '-',
+                    },
+                  },
+                ],
               },
-            ],
+            },
           },
-        },
+        ],
       });
     },
   },

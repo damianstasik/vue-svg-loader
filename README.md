@@ -21,7 +21,10 @@ module.exports = {
     rules: [
       {
         test: /\.svg$/,
-        loader: 'vue-svg-loader',
+        use: [
+          'babel-loader',
+          'vue-svg-loader',
+        ],
       },
     ],
   },
@@ -36,6 +39,9 @@ module.exports = {
     svgRule.uses.clear();
 
     svgRule
+      .use('babel-loader')
+      .loader('babel-loader')
+      .end()
       .use('vue-svg-loader')
       .loader('vue-svg-loader');
   },
@@ -53,7 +59,10 @@ module.exports = {
 
       config.module.rules.push({
         test: /\.svg$/,
-        loader: 'vue-svg-loader',
+        use: [
+          'babel-loader',
+          'vue-svg-loader',
+        ],
       });
     },
   },
