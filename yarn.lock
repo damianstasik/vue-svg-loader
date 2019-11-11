@@ -6566,10 +6566,10 @@ svg-tags@^1.0.0:
   resolved "https://registry.npmjs.org/svg-tags/-/svg-tags-1.0.0.tgz#58f71cee3bd519b59d4b2a843b6c7de64ac04764"
   integrity sha1-WPcc7jvVGbWdSyqEO2x95krAR2Q=
 
-svg-to-vue@^0.5.0:
-  version "0.5.0"
-  resolved "https://registry.npmjs.org/svg-to-vue/-/svg-to-vue-0.5.0.tgz#9b75baab677104a13649e38814dc4e9c6b20cd47"
-  integrity sha512-DhyoSbSM9h7HygtxS+QFDziGTx3JiMhu2Mry3XdmOgcgsgSmTS0iqpHzmo0V91UNre4AZrnsw1cAD4yWtmeuGw==
+svg-to-vue@^0.6.0:
+  version "0.6.0"
+  resolved "https://registry.npmjs.org/svg-to-vue/-/svg-to-vue-0.6.0.tgz#d5de9ec7126ac3c11adf8cfad013a6264ef57184"
+  integrity sha512-SYGJMBq5EHt/nIJxZ4kA9A6bilaFXtOPFJRoMQ2ml/jFP4N9L7HVFTm+5WCFN3QFnEUXtH6BHzpoOlwP1/5+2A==
   dependencies:
     svgo "^1.3.2"
 
