@@ -20,14 +20,14 @@ features:
 <Tab name="yarn">
 
 ``` bash
-yarn add -D vue-svg-loader vue-template-compiler
+yarn add -D vue-svg-loader@beta
 ```
 
 </Tab>
 <Tab name="npm">
 
 ``` bash
-npm i -D vue-svg-loader vue-template-compiler
+npm i -D vue-svg-loader@beta
 ```
 
 </Tab>
