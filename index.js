@@ -1,14 +1,22 @@
-const svgToVue = require('svg-to-vue');
+const SVGO = require('svgo');
 const { getOptions } = require('loader-utils');
 
-module.exports = function (content) {
+module.exports = async function (svg) {
   const callback = this.async();
-  const { svgo } = getOptions(this) || {};
+  const { svgo: svgoConfig } = getOptions(this) || {};
 
-  svgToVue(content, {
-    svgoPath: this.resourcePath,
-    svgoConfig: svgo,
-  })
-    .then(component => callback(null, component))
-    .catch(callback);
+  if (svgoConfig !== false) {
+    const svgo = new SVGO(svgoConfig);
+
+    try {
+      ({ data: svg } = await svgo.optimize(svg, {
+        path: this.resourcePath,
+      }));
+    } catch (error) {
+      callback(error);
+      return;
+    }
+  }
+
+  callback(null, `<template>${svg.replace('<svg', '<svg v-on="$listeners"')}</template>`)
 };

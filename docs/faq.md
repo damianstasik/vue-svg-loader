@@ -19,7 +19,7 @@ module.exports = {
           {
             resourceQuery: /inline/,
             use: [
-              'babel-loader',
+              'vue-loader',
               'vue-svg-loader',
             ],
           },
@@ -49,8 +49,8 @@ module.exports = {
     svgRule
       .oneOf('inline')
       .resourceQuery(/inline/)
-      .use('babel-loader')
-      .loader('babel-loader')
+      .use('vue-loader')
+      .loader('vue-loader')
       .end()
       .use('vue-svg-loader')
       .loader('vue-svg-loader')
@@ -83,7 +83,7 @@ module.exports = {
           {
             resourceQuery: /inline/,
             use: [
-              'babel-loader',
+              'vue-loader',
               'vue-svg-loader',
             ],
           },
@@ -147,7 +147,7 @@ module.exports = {
       {
         test: /\.svg$/,
         use: [
-          'babel-loader',
+          'vue-loader',
           {
             loader: 'vue-svg-loader',
             options: {
@@ -176,8 +176,8 @@ module.exports = {
     svgRule.uses.clear();
 
     svgRule
-      .use('babel-loader')
-      .loader('babel-loader')
+      .use('vue-loader')
+      .loader('vue-loader')
       .end()
       .use('vue-svg-loader')
       .loader('vue-svg-loader')
@@ -206,7 +206,7 @@ module.exports = {
       config.module.rules.push({
         test: /\.svg$/,
         use: [
-          'babel-loader',
+          'vue-loader',
           {
             loader: 'vue-svg-loader',
             options: {
@@ -242,7 +242,7 @@ module.exports = {
       {
         test: /\.svg$/,
         use: [
-          'babel-loader',
+          'vue-loader',
           {
             loader: 'vue-svg-loader',
             options: {
@@ -278,8 +278,8 @@ module.exports = {
     svgRule.uses.clear();
 
     svgRule
-      .use('babel-loader')
-      .loader('babel-loader')
+      .use('vue-loader')
+      .loader('vue-loader')
       .end()
       .use('vue-svg-loader')
       .loader('vue-svg-loader')
@@ -315,7 +315,7 @@ module.exports = {
       config.module.rules.push({
         test: /\.svg$/,
         use: [
-          'babel-loader',
+          'vue-loader',
           {
             loader: 'vue-svg-loader',
             options: {

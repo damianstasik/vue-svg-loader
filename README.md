@@ -8,9 +8,9 @@
 
 ## Installation
 ``` bash
-npm i -D vue-svg-loader vue-template-compiler
+npm i -D vue-svg-loader
 
-yarn add --dev vue-svg-loader vue-template-compiler
+yarn add --dev vue-svg-loader
 ```
 
 ## Basic configuration
@@ -22,7 +22,7 @@ module.exports = {
       {
         test: /\.svg$/,
         use: [
-          'babel-loader',
+          'vue-loader',
           'vue-svg-loader',
         ],
       },
@@ -39,8 +39,8 @@ module.exports = {
     svgRule.uses.clear();
 
     svgRule
-      .use('babel-loader')
-      .loader('babel-loader')
+      .use('vue-loader')
+      .loader('vue-loader')
       .end()
       .use('vue-svg-loader')
       .loader('vue-svg-loader');
@@ -60,7 +60,7 @@ module.exports = {
       config.module.rules.push({
         test: /\.svg$/,
         use: [
-          'babel-loader',
+          'vue-loader',
           'vue-svg-loader',
         ],
       });
