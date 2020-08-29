@@ -1,7 +1,7 @@
 const SVGO = require('svgo');
 const { getOptions } = require('loader-utils');
 const { version } = require('vue');
-const { major } = require('semver')
+const semverMajor = require('semver/functions/major')
 
 module.exports = async function (svg) {
   const callback = this.async();
@@ -20,7 +20,7 @@ module.exports = async function (svg) {
     }
   }
 
-  if (major(version) === 2) {
+  if (semverMajor(version) === 2) {
     svg = svg.replace('<svg', '<svg v-on="$listeners"');
   }
 
