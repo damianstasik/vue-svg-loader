@@ -1,0 +1,11 @@
+{
+  "private": true,
+  "scripts": {
+    "dev": "vuepress dev",
+    "build": "vuepress build"
+  },
+  "dependencies": {
+    "vue-tabs-component": "^1.5.0",
+    "vuepress": "^1.5.3"
+  }
+}
