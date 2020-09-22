@@ -22,6 +22,7 @@ module.exports = {
       {
         test: /\.svg$/,
         use: [
+          'babel-loader', // 'babel-loader' is optional to help it work in old browsers
           'vue-loader',
           'vue-svg-loader',
         ],
@@ -39,6 +40,9 @@ module.exports = {
     svgRule.uses.clear();
 
     svgRule
+      .use('babel-loader') // 'babel-loader' is optional to help it work in old browsers
+      .loader('babel-loader')
+      .end()
       .use('vue-loader')
       .loader('vue-loader') // or `vue-loader-v16` if you are using a preview support of Vue 3 in Vue CLI
       .end()
@@ -60,6 +64,7 @@ module.exports = {
       config.module.rules.push({
         test: /\.svg$/,
         use: [
+          'babel-loader', // 'babel-loader' is optional to help it work in old browsers
           'vue-loader',
           'vue-svg-loader',
         ],
