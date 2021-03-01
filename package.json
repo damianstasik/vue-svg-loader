@@ -17,7 +17,7 @@
   "main": "index.js",
   "dependencies": {
     "loader-utils": "^2.0.0",
-    "semver": "^7.3.2",
+    "semver": "^7.3.4",
     "svgo": "^1.3.2"
   },
   "peerDependencies": {
