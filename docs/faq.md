@@ -366,15 +366,15 @@ There is one major issue when it comes to integrating vue-svg-loader with Jest, 
 If your SVGs are prepared, create a transform file named for example `svgTransform.js` with:
 
 ``` js
-const vueJest = require('vue-jest/lib/template-compiler');
+const compilerUtils = require('@vue/component-compiler-utils');
+const VueTemplateCompiler = require('vue-template-compiler');
 
 module.exports = {
-  process(content) {
-    const { render } = vueJest({
-      content,
-      attrs: {
-        functional: false,
-      },
+  process(source) {
+    const { render } = compilerUtils.compileTemplate({
+      source,
+      compiler: VueTemplateCompiler,
+      isFunctional: false,
     });
 
     return `module.exports = { render: ${render} }`;
