@@ -17,5 +17,9 @@ module.exports = function vueSvgLoader(svg) {
     svg = svg.replace('<svg', '<svg v-on="$listeners"');
   }
 
+  if (semverMajor(version) === 3) {
+    svg = svg.replace('</svg>', '<slot></slot></svg>');
+  }
+
   return `<template>${svg}</template>`;
 };
