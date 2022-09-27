@@ -17,7 +17,6 @@
   "author": "Gamma Communications GmbH <webdevelopment@gammacommunications.de>",
   "main": "index.js",
   "dependencies": {
-    "loader-utils": "^3.2.0",
     "semver": "^7.3.5",
     "svgo": "^2.2.2"
   },
