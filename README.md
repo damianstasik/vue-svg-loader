@@ -1,6 +1,6 @@
 <p align="center"><img src="docs/.vuepress/public/logo.svg?sanitize=true" width="40%"></p>
-<h1 align="center">vue-svg-loader</h1>
-<p align="center">webpack loader that lets you use SVG files as Vue components</p>
+<h1 align="center">vue-svg-loader-2</h1>
+<p align="center">A maintained version of the popular vue-svg-loader webpack loader that lets you use SVG files as Vue components</p>
 <p align="center">
   <a href="https://vue-svg-loader.js.org">Documentation</a> -
   <a href="https://vue-svg-loader.js.org/faq.html">FAQ</a>
@@ -8,9 +8,9 @@
 
 ## Installation
 ``` bash
-npm i -D vue-svg-loader@beta
+npm i -D vue-svg-loader-2@beta
 
-yarn add --dev vue-svg-loader@beta
+yarn add --dev vue-svg-loader-2@beta
 ```
 
 ## Basic configuration
@@ -23,7 +23,7 @@ module.exports = {
         test: /\.svg$/,
         use: [
           'vue-loader',
-          'vue-svg-loader',
+          'vue-svg-loader-2',
         ],
       },
     ],
@@ -37,13 +37,17 @@ module.exports = {
     const svgRule = config.module.rule('svg');
 
     svgRule.uses.clear();
+    
+    // prevent injection of webpack-5 asset loaders
+    svgRule.delete('type');
+    svgRule.delete('generator');
 
     svgRule
       .use('vue-loader')
       .loader('vue-loader') // or `vue-loader-v16` if you are using a preview support of Vue 3 in Vue CLI
       .end()
-      .use('vue-svg-loader')
-      .loader('vue-svg-loader');
+      .use('vue-svg-loader-2')
+      .loader('vue-svg-loader-2');
   },
 };
 ```
@@ -61,7 +65,7 @@ module.exports = {
         test: /\.svg$/,
         use: [
           'vue-loader',
-          'vue-svg-loader',
+          'vue-svg-loader-2',
         ],
       });
     },
