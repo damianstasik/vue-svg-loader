@@ -18,7 +18,7 @@
   "main": "index.js",
   "dependencies": {
     "semver": "^7.3.7",
-    "svgo": "^2.8.0"
+    "svgo": "^3.0.0"
   },
   "peerDependencies": {
     "vue": "^2.5.0 || ^3.0.0-0"
