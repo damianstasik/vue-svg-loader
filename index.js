@@ -29,9 +29,10 @@ module.exports = function vueSvgLoader(svg) {
     path: this.resourcePath,
     ...svgoConfig
   });
+  
+  const error = (optimized.modernError || optimized.error) || false
 
-  if(optimized.modernError ?? optimized.error){
-    let error = optimized.modernError ?? optimized.error;
+  if(error){
     // we'll throw a fatal error here for now
     // this will stop the current compilation run and make the user aware that at least one of the svgs could not be processed
     throw error;
