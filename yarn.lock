@@ -2406,8 +2406,8 @@ mdn-data@2.0.28:
   resolved "https://registry.npmjs.org/mdn-data/-/mdn-data-2.0.28.tgz"
 
 memfs@^3.4.10:
-  version "3.4.12"
-  resolved "https://registry.npmjs.org/memfs/-/memfs-3.4.12.tgz"
+  version "3.4.13"
+  resolved "https://registry.yarnpkg.com/memfs/-/memfs-3.4.13.tgz#248a8bd239b3c240175cd5ec548de5227fc4f345"
   dependencies:
     fs-monkey "^1.0.3"
 
