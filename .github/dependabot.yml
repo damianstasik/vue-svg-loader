@@ -9,6 +9,7 @@ updates:
     directory: "/" # Location of package manifests
     schedule:
       interval: "daily"
+    versioning-strategy: increase-if-necessary
     commit-message:
       prefix: "patch"
       prefix-development: "dev-patch"
