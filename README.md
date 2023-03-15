@@ -108,4 +108,4 @@ export default {
 ```
 
 ## License
-[![FOSSA Status](https://app.fossa.io/api/projects/git%2Bgithub.com%2Fvisualfanatic%2Fvue-svg-loader.svg?type=large)](https://app.fossa.io/projects/git%2Bgithub.com%2Fvisualfanatic%2Fvue-svg-loader?ref=badge_large)
+[![FOSSA Status](https://app.fossa.com/api/projects/git%2Bgithub.com%2Fgammacommunications%2Fvue-svg-loader-2.svg?type=large)](https://app.fossa.com/projects/git%2Bgithub.com%2Fgammacommunications%2Fvue-svg-loader-2?ref=badge_large)
