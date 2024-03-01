@@ -349,8 +349,9 @@ To fix that you need to provide a type definition which is needed by TypeScript 
 
 ``` ts
 declare module '*.svg' {
-  import Vue, {VueConstructor} from 'vue';
-  const content: VueConstructor<Vue>;
+  import type { SVGAttributes, DefineComponent } from 'vue';
+
+  const content: DefineComponent<SVGAttributes>;
   export default content;
 }
 ```
